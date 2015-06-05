@@ -1,10 +1,12 @@
 #Sprint
 SPR <- readRDS("sprint.rds")
 CURRENT_RATING_SPR <- readRDS("current_rating_spr.rds")
+RACEID_DATE_SPR <- readRDS("raceid_date_spr.rds")
 
 #Distance
 DST <- readRDS("distance.rds")
 CURRENT_RATING_DST <- readRDS("current_rating_dst.rds")
+RACEID_DATE_DST <- readRDS("raceid_date_dst.rds")
 
 P <- 1.25
 PROVISIONAL_N <- 6L
