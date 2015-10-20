@@ -1,4 +1,5 @@
 ath_ranking <- function(s,dt,ratings,prov = 6){
+  if (s > max(ratings$season)) s <- max(ratings$season)
   rnk <- ratings %>%
     filter(season == s & date <= dt) %>%
     group_by(gender,fisid,name) %>%
