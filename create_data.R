@@ -2,8 +2,8 @@ library(RSQLite)
 library(dplyr)
 #Distance
 default_rating <- 1300
-con <- statskier::db_xc()
-dst <- statskier::query(con,
+conl <- statskier2::db_xc_local()
+dst <- statskier2::ss_query(conl,
                         "select * 
                         from main 
                         where type = 'Distance' 
@@ -27,8 +27,8 @@ saveRDS(raceid_date_dst,"raceid_date_dst.rds")
 
 #Sprint
 default_rating <- 1300
-con <- statskier::db_xc()
-spr <- statskier::query(con,
+conl <- statskier2::db_xc_local()
+spr <- statskier2::ss_query(conl,
                         "select * 
               from main 
               where type = 'Sprint' and rank is not null 
