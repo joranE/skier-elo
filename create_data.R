@@ -4,7 +4,7 @@ library(dplyr)
 default_rating <- 1300
 conl <- statskier2::db_xc_local()
 dst <- statskier2::ss_query(conl,
-                        "select raceid,date,season,gender,name,fisid,nation,time,rank 
+                        "select raceid,date,season,cat1,start,gender,name,fisid,nation,time,rank 
                         from main 
                         where type = 'Distance' 
                         order by date,raceid,rank")
@@ -28,7 +28,7 @@ saveRDS(raceid_date_dst,"raceid_date_dst.rds")
 default_rating <- 1300
 conl <- statskier2::db_xc_local()
 spr <- statskier2::ss_query(conl,
-                        "select raceid,date,season,gender,name,fisid,nation,time,rank  
+                        "select raceid,date,season,cat1,gender,name,fisid,nation,time,rank  
               from main 
               where type = 'Sprint' and rank is not null 
               order by date,raceid,rank")
